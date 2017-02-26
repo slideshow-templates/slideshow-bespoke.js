@@ -1,0 +1,18 @@
+######################################################################
+# Sample Slide Show (S9) template package manifest using bespoke.js
+# - bespoke.js by Mark Dalgleish et al; see https://github.com/bespokejs/bespoke
+#
+# Change as desired/needed
+#
+# Configured to use the following headers in slides.html:
+#
+# author: Your Name Here
+# title: Your Slide Show Title Here
+#
+# Questions? Comments?
+# Send them along to the wwwmake forum/mailing List.
+# http://groups.google.com/group/wwwmake
+
+__file__.html slides.html
+
+js/bespoke.bundle.js
