@@ -1,0 +1,20 @@
+#####
+#  GitHub Pages / Jekyll settings / config
+
+headers:
+  title:     Bespoke.js – The DIY Presentation Micro-Framework
+  author:    Mark Dalgleish
+  generator: GitHub Pages w/ Jekyll
+
+collections:
+  slides:
+    output: false
+
+
+exclude:
+- README.md
+- package.json
+- node_modules
+- src
+- webpack.config.js
+- sample.md

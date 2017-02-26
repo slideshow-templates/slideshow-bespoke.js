@@ -1,0 +1,25 @@
+{
+  "name": "slideshow-bespoke.js",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./bespoke/bespoke.bundle.js",
+  "scripts": {
+    "build": "webpack"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "bespoke": "^1.1.0",
+    "bespoke-theme-cube": "^2.0.1",
+    "bespoke-backdrop": "^1.0.0",
+    "bespoke-bullets": "^1.1.0",
+    "bespoke-keys": "^1.1.0",
+    "bespoke-progress": "^1.0.0",
+    "bespoke-scale": "^1.0.1",
+    "bespoke-touch": "^1.0.0"
+  },
+  "devDependencies": {
+    "webpack": "^2.2.1"
+  }
+}
