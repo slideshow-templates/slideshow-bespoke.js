@@ -2,7 +2,7 @@
   "name": "slideshow-bespoke.js",
   "version": "1.0.0",
   "description": "",
-  "main": "./bespoke/bespoke.bundle.js",
+  "main": "./js/bespoke.bundle.js",
   "scripts": {
     "build": "webpack"
   },

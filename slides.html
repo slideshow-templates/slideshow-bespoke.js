@@ -1,0 +1,29 @@
+---
+---
+
+{% if jekyll %}
+  {% assign headers   = site.headers %}
+  {% assign slides    = site.slides %}
+{% endif %}
+
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+    <title>{{ headers['title'] }}</title>
+    <meta name="description" content="{{ headers['description'] }}">
+    <meta name="author"      content="{{ headers['author'] }}">
+  </head>
+  <body>
+    <article id="presentation">
+
+    {% for slide in slides %}
+      <section>
+        {{ slide.content }}
+      </section>
+    {% endfor %}
+
+    </article>
+    <script src="js/bespoke.bundle.js"></script>
+  </body>
+</html>

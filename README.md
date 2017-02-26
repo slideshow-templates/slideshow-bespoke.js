@@ -90,7 +90,7 @@ And the added bespoke theme used is `bespoke-theme-cube`. E.g. to install use:
 
 Uses webpack to bundle all bespoke modules
 imported and configured in `src/index.js`
-into a single bundle, that is, `bespoke/bespoke.bundle.js`.
+into a single bundle, that is, `js/bespoke.bundle.js`.
 To run webpack use:
 
     $ npm run build
@@ -131,7 +131,7 @@ Ready to go. In your html page use:
       <section>Slide 2</section>
       <section>Slide 3</section>
     </article>
-    <script src="bespoke/bespoke.bundle.js"></script>
+    <script src="js/bespoke.bundle.js"></script>
   </body>
 </html>    
 ```

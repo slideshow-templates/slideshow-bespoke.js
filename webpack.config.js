@@ -4,6 +4,6 @@ module.exports = {
   entry: './src/index.js',
   output: {
     filename: 'bespoke.bundle.js',
-    path: path.resolve(__dirname, 'bespoke')
+    path: path.resolve(__dirname, 'js')
   }
 };
