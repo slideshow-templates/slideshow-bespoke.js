@@ -1,14 +1,17 @@
 ---
 ---
 
-# Bespoke.js
+# Cube
 
-## DIY Presentation Micro-Framework
-
-Bespoke.js is a super minimal (1KB min'd and gzipped),
-modular presentation library for modern browsers,
-designed to foster a rich plugin ecosystem.
+## bespoke-theme-cube
 
 ---
 
 ### By [@markdalgleish](https://github.com/markdalgleish)
+
+<!--
+<h1>Cube</h1>
+<h2>bespoke-theme-cube</h2>
+<hr>
+<h3>By <a href="https://github.com/markdalgleish">@markdalgleish</a></h3>
+-->
