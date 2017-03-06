@@ -493,18 +493,36 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 
 
 
+/////
+// hack: add the div wrapper from the cube theme (no longer included/bundled)
+//  thus, include here/inline
+//   see https://github.com/bespokejs/bespoke-theme-cube/blob/master/lib/bespoke-theme-cube.js
+
+function cube_wrapper() {
+  return function(deck) {
+    var wrap = function(element) {
+      var wrapper = document.createElement('div');
+      wrapper.className = 'bespoke-theme-cube-slide-parent';
+      element.parentNode.insertBefore(wrapper, element);
+      wrapper.appendChild(element);
+    };
+
+    deck.slides.forEach(wrap);
+  };
+}
 
 
 // all together now; configure and startup
 __WEBPACK_IMPORTED_MODULE_0_bespoke___default.a.from( '#presentation', [
+  __WEBPACK_IMPORTED_MODULE_1_bespoke_classes___default()(),
   // cube(),
+  cube_wrapper(),      // note: for now include for all themes (just adds a div wrapper - no harm for others??)
   __WEBPACK_IMPORTED_MODULE_2_bespoke_keys___default()(),
   __WEBPACK_IMPORTED_MODULE_3_bespoke_touch___default()(),
   __WEBPACK_IMPORTED_MODULE_4_bespoke_bullets___default()( 'li, .bullet' ),
   __WEBPACK_IMPORTED_MODULE_5_bespoke_scale___default()(),
   __WEBPACK_IMPORTED_MODULE_6_bespoke_progress___default()(),
-  __WEBPACK_IMPORTED_MODULE_7_bespoke_backdrop___default()(),
-  __WEBPACK_IMPORTED_MODULE_1_bespoke_classes___default()()
+  __WEBPACK_IMPORTED_MODULE_7_bespoke_backdrop___default()()
 ]);
 
 
