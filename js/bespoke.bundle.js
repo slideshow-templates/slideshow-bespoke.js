@@ -63,7 +63,7 @@
 /******/ 	__webpack_require__.p = "";
 
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 7);
+/******/ 	return __webpack_require__(__webpack_require__.s = 8);
 /******/ })
 /************************************************************************/
 /******/ ([
@@ -203,6 +203,46 @@ module.exports = function(options) {
 /* 2 */
 /***/ (function(module, exports) {
 
+module.exports = function() {
+  return function(deck) {
+    var addClass = function(el, cls) {
+        el.classList.add('bespoke-' + cls);
+      },
+
+      removeClass = function(el, cls) {
+        el.className = el.className
+          .replace(new RegExp('bespoke-' + cls +'(\\s|$)', 'g'), ' ')
+          .trim();
+      },
+
+      deactivate = function(el, index) {
+        var activeSlide = deck.slides[deck.slide()],
+          offset = index - deck.slide(),
+          offsetClass = offset > 0 ? 'after' : 'before';
+
+        ['before(-\\d+)?', 'after(-\\d+)?', 'active', 'inactive'].map(removeClass.bind(null, el));
+
+        if (el !== activeSlide) {
+          ['inactive', offsetClass, offsetClass + '-' + Math.abs(offset)].map(addClass.bind(null, el));
+        }
+      };
+
+    addClass(deck.parent, 'parent');
+    deck.slides.map(function(el) { addClass(el, 'slide'); });
+
+    deck.on('activate', function(e) {
+      deck.slides.map(deactivate);
+      addClass(e.slide, 'active');
+      removeClass(e.slide, 'inactive');
+    });
+  };
+};
+
+
+/***/ }),
+/* 3 */
+/***/ (function(module, exports) {
+
 module.exports = function(options) {
   return function(deck) {
     var isHorizontal = options !== 'vertical';
@@ -225,7 +265,7 @@ module.exports = function(options) {
 
 
 /***/ }),
-/* 3 */
+/* 4 */
 /***/ (function(module, exports) {
 
 module.exports = function(options) {
@@ -247,7 +287,7 @@ module.exports = function(options) {
 
 
 /***/ }),
-/* 4 */
+/* 5 */
 /***/ (function(module, exports) {
 
 module.exports = function(options) {
@@ -298,7 +338,7 @@ module.exports = function(options) {
 
 
 /***/ }),
-/* 5 */
+/* 6 */
 /***/ (function(module, exports) {
 
 module.exports = function(options) {
@@ -331,7 +371,7 @@ module.exports = function(options) {
 
 
 /***/ }),
-/* 6 */
+/* 7 */
 /***/ (function(module, exports) {
 
 var from = function(opts, plugins) {
@@ -413,30 +453,35 @@ module.exports = {
 
 
 /***/ }),
-/* 7 */
+/* 8 */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bespoke__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bespoke__ = __webpack_require__(7);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0_bespoke___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_0_bespoke__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bespoke_keys__ = __webpack_require__(2);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bespoke_keys___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_bespoke_keys__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bespoke_touch__ = __webpack_require__(5);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bespoke_touch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_bespoke_touch__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_bespoke_bullets__ = __webpack_require__(1);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_bespoke_bullets___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_bespoke_bullets__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_bespoke_scale__ = __webpack_require__(4);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_bespoke_scale___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_bespoke_scale__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_bespoke_progress__ = __webpack_require__(3);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_bespoke_progress___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_bespoke_progress__);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_bespoke_backdrop__ = __webpack_require__(0);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_bespoke_backdrop___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_bespoke_backdrop__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bespoke_classes__ = __webpack_require__(2);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_bespoke_classes___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_1_bespoke_classes__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bespoke_keys__ = __webpack_require__(3);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_bespoke_keys___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_2_bespoke_keys__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_bespoke_touch__ = __webpack_require__(6);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_bespoke_touch___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_3_bespoke_touch__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_bespoke_bullets__ = __webpack_require__(1);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_bespoke_bullets___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_4_bespoke_bullets__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_bespoke_scale__ = __webpack_require__(5);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5_bespoke_scale___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_5_bespoke_scale__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_bespoke_progress__ = __webpack_require__(4);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6_bespoke_progress___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_6_bespoke_progress__);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_bespoke_backdrop__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_7_bespoke_backdrop___default = __webpack_require__.n(__WEBPACK_IMPORTED_MODULE_7_bespoke_backdrop__);
 
 
 // included/bundles themes
 //  note: no longer include/bundle themes - get include "unbundled"
+//  note:  now MUST include bespoke-classes "by hand" - was automatic included w/ theme
+
 // import cube     from 'bespoke-theme-cube';
+
 
 // included/bundled plugins
 
@@ -453,12 +498,13 @@ Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
 // all together now; configure and startup
 __WEBPACK_IMPORTED_MODULE_0_bespoke___default.a.from( '#presentation', [
   // cube(),
-  __WEBPACK_IMPORTED_MODULE_1_bespoke_keys___default()(),
-  __WEBPACK_IMPORTED_MODULE_2_bespoke_touch___default()(),
-  __WEBPACK_IMPORTED_MODULE_3_bespoke_bullets___default()( 'li, .bullet' ),
-  __WEBPACK_IMPORTED_MODULE_4_bespoke_scale___default()(),
-  __WEBPACK_IMPORTED_MODULE_5_bespoke_progress___default()(),
-  __WEBPACK_IMPORTED_MODULE_6_bespoke_backdrop___default()()
+  __WEBPACK_IMPORTED_MODULE_2_bespoke_keys___default()(),
+  __WEBPACK_IMPORTED_MODULE_3_bespoke_touch___default()(),
+  __WEBPACK_IMPORTED_MODULE_4_bespoke_bullets___default()( 'li, .bullet' ),
+  __WEBPACK_IMPORTED_MODULE_5_bespoke_scale___default()(),
+  __WEBPACK_IMPORTED_MODULE_6_bespoke_progress___default()(),
+  __WEBPACK_IMPORTED_MODULE_7_bespoke_backdrop___default()(),
+  __WEBPACK_IMPORTED_MODULE_1_bespoke_classes___default()()
 ]);
 
 
