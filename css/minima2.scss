@@ -22,10 +22,10 @@
 
 .bespoke-parent {
   background-color: silver;
+  width:  100%;
+  height: 100%;
 
   font-size: 1.5em;
-  // text-align: center;
-  // background-position: 50% 50%; -- check -- needed?? why? why not? just for animations?
 }
 
 
@@ -33,6 +33,7 @@
   background-color: white;
   width: 940px;
   height: 480px;
+  margin: auto;    // use to center slide ???
 }
 
 .bespoke-active {
@@ -53,7 +54,7 @@
   top: 0;
   left: 0;
   right: 0;
-  height: .3vw;
+  height: .3vw;    // todo/check:  what is the vw unit? support by all browsers??
   z-index: 1;
 }
 
