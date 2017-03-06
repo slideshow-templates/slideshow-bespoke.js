@@ -520,7 +520,7 @@ __WEBPACK_IMPORTED_MODULE_0_bespoke___default.a.from( '#presentation', [
   __WEBPACK_IMPORTED_MODULE_2_bespoke_keys___default()(),
   __WEBPACK_IMPORTED_MODULE_3_bespoke_touch___default()(),
   __WEBPACK_IMPORTED_MODULE_4_bespoke_bullets___default()( 'li, .bullet' ),
-  __WEBPACK_IMPORTED_MODULE_5_bespoke_scale___default()(),
+  // scale(),     // note: do NOT include scale (auto-zoom) for now - use strg+plus or strg+minus etc.
   __WEBPACK_IMPORTED_MODULE_6_bespoke_progress___default()(),
   __WEBPACK_IMPORTED_MODULE_7_bespoke_backdrop___default()()
 ]);
