@@ -69,11 +69,10 @@ $bullet_transition_translate_x: 16px;
 
 .bespoke-slide {
   pointer-events: auto;
-  transition: {
-    transform: $slide_transition_length $slide_transition_easing;
-    opacity: $slide_transition_length $slide_transition_easing;
-    background: $slide_transition_length $slide_transition_easing;
-  }
+  transition:
+    transform   $slide_transition_length $slide_transition_easing,
+    opacity     $slide_transition_length $slide_transition_easing,
+    background  $slide_transition_length $slide_transition_easing;
   transform-origin: 50% 50% 0;
   backface-visibility: hidden;
   display: flex;
