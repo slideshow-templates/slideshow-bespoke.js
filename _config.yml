@@ -10,6 +10,9 @@ collections:
   slides:
     output: false
 
+sass:
+  sass_dir: css
+  style:    expanded
 
 exclude:
 - README.md

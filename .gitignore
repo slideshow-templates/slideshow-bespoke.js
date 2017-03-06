@@ -6,3 +6,8 @@ _site/
 ## npm/node
 
 node_modules/
+
+
+## testing scss / tmp build output (o)
+
+css/o

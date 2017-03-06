@@ -1,6 +1,6 @@
-// ---
-// # add front matter here
-// ---
+---
+# add front matter here
+---
 
 //  bespoke.js cube theme
 //    adapted from stylus source; see https://github.com/bespokejs/bespoke-theme-cube/blob/master/lib/theme.styl
@@ -69,9 +69,9 @@ $bullet_transition_translate_x: 16px;
 .bespoke-slide {
   pointer-events: auto;
   transition: {
-    transform $slide_transition_length $slide_transition_easing,
-    opacity $slide_transition_length $slide_transition_easing,
-    background $slide_transition_length $slide_transition_easing;
+    transform: $slide_transition_length $slide_transition_easing;
+    opacity: $slide_transition_length $slide_transition_easing;
+    background: $slide_transition_length $slide_transition_easing;
   }
   transform-origin: 50% 50% 0;
   backface-visibility: hidden;
@@ -125,7 +125,7 @@ $bullet_transition_translate_x: 16px;
   opacity: 0;
   pointer-events: none;
   @media print {
-    opacity 1;
+    opacity: 1;
   }
 }
 
@@ -144,16 +144,19 @@ $bullet_transition_translate_x: 16px;
 
 .bespoke-bullet-inactive {
   opacity: 0;
-  li& {
-    transform: translateX($bullet_transition_translate_x);
-    @media print {
-      transform: none;
-    }
-  }
   @media print {
     opacity: 1;
   }
 }
+
+li.bespoke-bullet-inactive {
+  transform: translateX($bullet_transition_translate_x);
+  @media print {
+    transform: none;
+  }
+}
+
+
 
 .bespoke-bullet-active {
   opacity: 1;
