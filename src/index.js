@@ -44,7 +44,7 @@ bespoke.from( '#presentation', [
   keys(),
   touch(),
   bullets( 'li, .bullet' ),
-  scale(),
+  // scale(),     // note: do NOT include scale (auto-zoom) for now - use strg+plus or strg+minus etc.
   progress(),
   backdrop()
 ]);

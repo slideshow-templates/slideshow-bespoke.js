@@ -1,0 +1,67 @@
+---
+# add front matter here
+---
+
+
+// todo:
+//   add styles for bullets (steps)
+
+
+
+////////////
+// notes:
+//   minima v2 (variant 2)
+//   use display: block/none  to browse slide
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.bespoke-parent {
+  background-color: silver;
+
+  font-size: 1.5em;
+  // text-align: center;
+  // background-position: 50% 50%; -- check -- needed?? why? why not? just for animations?
+}
+
+
+.bespoke-slide {
+  background-color: white;
+  width: 940px;
+  height: 480px;
+}
+
+.bespoke-active {
+  display: block;
+}
+
+.bespoke-inactive {
+  display: none;
+}
+
+
+
+////////////////////////////////////
+// add progress bar
+
+.bespoke-progress-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: .3vw;
+  z-index: 1;
+}
+
+.bespoke-progress-bar {
+  background-color: #0089f3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: width 1s ease;
+}
