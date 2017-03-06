@@ -1,0 +1,67 @@
+---
+# add front matter here
+---
+
+
+
+* {
+  margin: 0;
+  padding: 0;
+}
+
+.bespoke-parent {
+  background-color: silver;
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  overflow: hidden;
+
+  font-size: 1.5em;
+  // text-align: center;
+  // background-position: 50% 50%; -- check -- needed?? why? why not? just for animations?
+}
+
+
+.bespoke-slide {
+  background-color: white;
+  width: 940px;
+  height: 480px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  margin-left: -(940px / 2);   // was: -(@width / 2)
+  margin-top: -(480px / 2);   // was: -(@height / 2)
+  z-index: 1;
+}
+
+.bespoke-active {
+}
+
+.bespoke-inactive {
+  opacity: 0;
+}
+
+
+
+////////////////////////////////////
+// add progress bar
+
+.bespoke-progress-parent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: .3vw;
+  z-index: 1;
+}
+
+.bespoke-progress-bar {
+  background-color: #0089f3;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  transition: width 1s ease;
+}

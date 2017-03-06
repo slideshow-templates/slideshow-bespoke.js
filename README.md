@@ -9,7 +9,10 @@ See [`slides.html`](http://slideshow-templates.github.io/slideshow-bespoke.js/sl
 For testing see
 [`test.html`](http://slideshow-templates.github.io/slideshow-bespoke.js/test.html),
 [`test.minimal.html`](http://slideshow-templates.github.io/slideshow-bespoke.js/test.minimal.html),
-[`test.nebula.html`](http://slideshow-templates.github.io/slideshow-bespoke.js/test.nebula.html).
+[`test.nebula.html`](http://slideshow-templates.github.io/slideshow-bespoke.js/test.nebula.html),
+[`test.minima1.html`](http://slideshow-templates.github.io/slideshow-bespoke.js/test.minima1.html),
+[`test.minima2.html`](http://slideshow-templates.github.io/slideshow-bespoke.js/test.minima2.html).
+
 
 
 ## What's Slide Show (S9)?
