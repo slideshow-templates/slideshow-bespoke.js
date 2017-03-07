@@ -7,6 +7,12 @@
 //   add styles for bullets (steps)
 
 
+// note: use @media screen
+//    lets you print your slides without any formatting (by default)
+//    otherwise the print is all messed up
+
+
+@media screen {
 
 * {
   margin: 0;
@@ -14,7 +20,6 @@
 }
 
 .bespoke-parent {
-  background-color: silver;
   position: absolute;
   top: 0;
   left: 0;
@@ -22,6 +27,7 @@
   bottom: 0;
   overflow: hidden;
 
+  background-color: silver;
   font-size: 1.5em;
   // text-align: center;
   // background-position: 50% 50%; -- check -- needed?? why? why not? just for animations?
@@ -29,15 +35,18 @@
 
 
 .bespoke-slide {
-  background-color: white;
-  width: 940px;
-  height: 480px;
+  $width:  940px;
+  $height: 480px;
   position: absolute;
+  width:  $width;
+  height: $height;
   top: 50%;
   left: 50%;
-  margin-left: -(940px / 2);   // was: -(@width / 2)
-  margin-top: -(480px / 2);   // was: -(@height / 2)
+  margin-left: -($width / 2);
+  margin-top: -($height / 2);
   z-index: 1;
+  
+  background-color: white; 
 }
 
 .bespoke-active {
@@ -45,6 +54,7 @@
 
 .bespoke-inactive {
   opacity: 0;
+  pointer-events: none;
 }
 
 
@@ -69,3 +79,5 @@
   height: 100%;
   transition: width 1s ease;
 }
+
+} // @media screen 
