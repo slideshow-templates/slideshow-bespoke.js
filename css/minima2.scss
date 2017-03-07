@@ -14,26 +14,32 @@
 //   use display: block/none  to browse slide
 
 
-
+@media screen {
+  
 * {
   margin: 0;
   padding: 0;
 }
 
-.bespoke-parent {
-  background-color: silver;
-  width:  100%;
+body {
   height: 100%;
+}  
+  
+.bespoke-parent {
+  width:  100%;
+  height: 100%;    // note: check that parent height is also 100%
 
-  font-size: 1.5em;
+  background-color: silver;
+  font-size: 2em;
 }
 
 
 .bespoke-slide {
-  background-color: white;
   width: 940px;
   height: 480px;
   margin: auto;    // use to center slide ???
+
+  background-color: white;
 }
 
 .bespoke-active {
@@ -45,6 +51,17 @@
 }
 
 
+
+///////////////
+// add support for bullets (steps)
+
+.bespoke-bullet-active {
+  opacity: 1;
+}  
+.bespoke-bullet-inactive {
+  opacity: 0;
+}
+  
 
 ////////////////////////////////////
 // add progress bar
@@ -66,3 +83,5 @@
   height: 100%;
   transition: width 1s ease;
 }
+  
+} // @media screen 
