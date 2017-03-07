@@ -14,8 +14,13 @@
 
 @media screen {
 
-* {
-  margin: 0;
+///////////////  
+// note: do NOT reset the list item (li) 
+  
+h1, h2, h3, 
+p, ul, 
+div, section, article {
+  margin:  0;
   padding: 0;
 }
 
@@ -57,7 +62,15 @@
   pointer-events: none;
 }
 
+///////////////
+// add support for bullets (steps)
 
+.bespoke-bullet-active {
+  opacity: 1;
+}  
+.bespoke-bullet-inactive {
+  opacity: 0;
+}
 
 ////////////////////////////////////
 // add progress bar
