@@ -16,13 +16,17 @@
 
 @media screen {
   
+/*  
 * {
   margin: 0;
   padding: 0;
 }
-
+*/
+  
 body {
   height: 100%;
+  
+  background-color: green;  // for debugging - check if 100%;
 }  
   
 .bespoke-parent {
@@ -30,12 +34,13 @@ body {
   height: 100%;    // note: check that parent height is also 100%
 
   background-color: silver;
+  border: 2px solid black;
   font-size: 2em;
 }
 
 
 .bespoke-slide {
-  width: 940px;
+  width:  940px;
   height: 480px;
   margin: auto;    // use to center slide ???
 
