@@ -15,10 +15,10 @@
 @media screen {
 
 ///////////////  
-// note: do NOT reset the list item (li) 
+// note: do NOT reset the unordered list (ol) - otherwise list markers overflow (needs padding-left or margin-left)
   
 h1, h2, h3, 
-p, ul, 
+p, 
 div, section, article {
   margin:  0;
   padding: 0;
@@ -33,7 +33,7 @@ div, section, article {
   overflow: hidden;
 
   background-color: silver;
-  font-size: 1.5em;
+  font-size: 2em;
   // text-align: center;
   // background-position: 50% 50%; -- check -- needed?? why? why not? just for animations?
 }
