@@ -15,4 +15,8 @@
 
 __file__.html slides.html
 
-js/bespoke.bundle.js
+
+### todo/fix:
+#  add converted css/cube.scss -> css/cube.css
+
+js/bespoke.cube.bundle.js
