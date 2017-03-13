@@ -15,7 +15,13 @@ sass:
   style:    expanded
 
 exclude:
+- css/o
+- bespoke.js.txt
+- BUILD.md
+- LICENSE.bespoke.js.txt
 - README.md
+- TODO.md
+- preview.png
 - package.json
 - node_modules
 - src
