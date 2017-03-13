@@ -9,18 +9,14 @@
 @import 'normalize/normalize.css';
 
 
-/////
-// todo/check if in sass
-//   prestige elite std, courier new etc.  -- needs to get wrapped into a string???
-
-
 $background: #111;
 $orange: #F30;
 $white: #ddd;
-$serif: didot, times new roman, serif;
-$sans-serif: futura, helvetica, arial, arial, sans-serif;
-$monospace: prestige elite std, consolas, courier new, monospace;
+$serif: "didot", "times new roman", serif;
+$sans-serif: "futura", "helvetica", "arial", sans-serif;
+$monospace: "prestige elite std", "consolas", "courier new", monospace;
 $emdash: '\2014';
+
 
 * {
   margin: 0;

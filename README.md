@@ -10,6 +10,7 @@ For testing see
 [`test.html`](http://slideshow-templates.github.io/slideshow-bespoke.js/test.html),
 [`test.minimal.html`](http://slideshow-templates.github.io/slideshow-bespoke.js/test.minimal.html),
 [`test.nebula.html`](http://slideshow-templates.github.io/slideshow-bespoke.js/test.nebula.html),
+[`test.voltaire.html`](http://slideshow-templates.github.io/slideshow-bespoke.js/test.voltaire.html),
 [`test.minima1.html`](http://slideshow-templates.github.io/slideshow-bespoke.js/test.minima1.html),
 [`test.minima2.html`](http://slideshow-templates.github.io/slideshow-bespoke.js/test.minima2.html).
 
