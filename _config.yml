@@ -21,7 +21,6 @@ exclude:
 - LICENSE.bespoke.js.txt
 - README.md
 - TODO.md
-- preview.png
 - package.json
 - node_modules
 - src
